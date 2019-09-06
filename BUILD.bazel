@@ -1,0 +1,23 @@
+java_runtime(
+    name = "jdk10",
+    srcs = ["@bazel_tools//tools/jdk:remote_jdk10"],
+)
+
+java_runtime(
+    name = "jdk11",
+    srcs = ["@bazel_tools//tools/jdk:remote_jdk11"],
+)
+
+java_binary(
+    name = "HelloJdk10",
+    srcs = ["HelloJdkVersion.java"],
+    main_class = "HelloJdkVersion",
+    toolchains = [":jdk10"],
+)
+
+java_binary(
+    name = "HelloJdk11",
+    srcs = ["HelloJdkVersion.java"],
+    main_class = "HelloJdkVersion",
+    toolchains = [":jdk11"],
+)

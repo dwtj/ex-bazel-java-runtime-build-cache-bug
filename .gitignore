@@ -1,0 +1,5 @@
+bazel-bin
+bazel-ex-bazel-java-runtime-build-cache-bug
+bazel-genfiles
+bazel-out
+bazel-testlogs
